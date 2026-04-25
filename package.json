@@ -2,9 +2,16 @@
   "name": "fake-employee-managment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsc",
+    "start": "node --env-file=.env dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=24.11.0",
+    "npm": ">=11.6.1"
   },
   "repository": {
     "type": "git",
@@ -17,5 +24,18 @@
   "bugs": {
     "url": "https://github.com/alfred-tester/fake-employee-managment/issues"
   },
-  "homepage": "https://github.com/alfred-tester/fake-employee-managment#readme"
+  "homepage": "https://github.com/alfred-tester/fake-employee-managment#readme",
+  "dependencies": {
+    "@scalar/express-api-reference": "0.9.10",
+    "better-sqlite3": "12.9.0",
+    "express": "5.2.1",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/express": "5.0.6",
+    "@types/node": "25.6.0",
+    "tsx": "4.21.0",
+    "typescript": "6.0.3"
+  }
 }
